@@ -26,7 +26,7 @@ export default function ExperienceCard({ exp }: { exp: Experience }) {
         {/* Title + Location Badge */}
         <div className="flex items-center justify-between">
           <h3 className="text-[15px] font-semibold text-[#212121]">{exp.title}</h3>
-          <span className="rounded-md bg-[#E8E8E8] px-2 py-[2px] text-[12px] text-[#424242]">
+          <span className="rounded-md bg-[#E8E8E8] px-2 py-0.5 text-[12px] text-[#424242]">
             {exp.location}
           </span>
         </div>

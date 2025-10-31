@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "HD Booking",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-[#FAFAFA] text-[#212121]">
-        <Navbar />
+        <Suspense>
+          <Navbar />
+        </Suspense>
         <main className="min-h-screen">{children}</main>
       </body>
     </html>
