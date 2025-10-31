@@ -16,11 +16,9 @@ const API_URL =
   "http://localhost:5000/api";
 
 export async function fetchExperiences(search?: string) {
-  const base =
-    process.env.NEXT_PUBLIC_API_URL?.replace(/\/+$/, "") ||
-    "http://localhost:5000/api";
-  const url = new URL(`${base}/experiences`);
+  const url = new URL(`${API_URL}/experiences`);
   if (search && search.trim()) url.searchParams.set("search", search.trim());
+
   const res = await fetch(url.toString(), { cache: "no-store" });
   if (!res.ok) throw new Error("Failed to load experiences");
   return res.json();
