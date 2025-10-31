@@ -206,7 +206,7 @@ export default async function ExperiencePage({
                 >
                   –
                 </Link>
-                <span className="min-w-[16px] text-center">{qty}</span>
+                <span className="min-w-4 text-center">{qty}</span>
                 <Link
                   href={`/experiences/${exp.id}?${buildQuery({ qty: qty + 1 })}`}
                   className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-[#E0E0E0] text-[#616161] hover:bg-[#F5F5F5]"

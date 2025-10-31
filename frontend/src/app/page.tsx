@@ -16,7 +16,7 @@ export default async function Home({
 
   return (
     <div className="mx-auto w-full max-w-7xl px-4 md:px-8 py-8">
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {experiences.map((exp: Experience) => (
           <ExperienceCard key={exp.id} exp={exp} />
         ))}
